@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intentional Bloom — Grow Into The Woman You're Becoming</title>
+<meta name="description" content="Gentle books, printable tools, and honest reflections for women choosing self-awareness, confidence, and a slower, more intentional life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F8F3EC;
+    --ink:#22281F;
+    --ink-soft:#4B5245;
+    --rose:#C17E85;
+    --rose-deep:#9C5B62;
+    --sage:#6C7C5F;
+    --sage-pale:#E4E7DA;
+    --line:#DCD3C4;
+    --gold:#B08D57;
+    --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,.serif{ font-family:'Fraunces', serif; font-weight:500; color:var(--ink);}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  section{padding:96px 0;}
+  @media (max-width:700px){ section{padding:64px 0;} .wrap{padding:0 22px;} }
+
+  /* Nav */
+  header{position:sticky; top:0; z-index:50; background:rgba(248,243,236,0.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  nav.wrap{display:flex; align-items:center; justify-content:space-between; padding-top:18px; padding-bottom:18px;}
+  .logo{font-family:'Fraunces',serif; font-size:1.25rem; font-weight:500; letter-spacing:.01em;}
+  .navlinks{display:flex; gap:34px; font-size:.92rem; color:var(--ink-soft);}
+  .navlinks a:hover{color:var(--rose-deep);}
+  .navToggle{display:none; background:none; border:none; font-size:1.5rem; cursor:pointer; color:var(--ink);}
+  @media (max-width:760px){
+    .navlinks{position:absolute; top:100%; left:0; right:0; background:var(--paper); flex-direction:column; gap:0; border-bottom:1px solid var(--line); display:none;}
+    .navlinks.open{display:flex;}
+    .navlinks a{padding:16px 22px; border-top:1px solid var(--line);}
+    .navToggle{display:block;}
+  }
+
+  /* Hero */
+  .hero{padding:120px 0 100px; position:relative; overflow:hidden;}
+  .hero .wrap{position:relative; z-index:2;}
+  .eyebrow{color:var(--sage); font-size:.95rem; margin-bottom:22px;}
+  .hero h1{font-size:clamp(2.6rem, 5.4vw, 4.4rem); line-height:1.06; max-width:14ch; letter-spacing:-.01em;}
+  .hero p{max-width:46ch; margin-top:28px; font-size:1.12rem; color:var(--ink-soft);}
+  .cta-row{display:flex; gap:18px; margin-top:40px; flex-wrap:wrap;}
+  .btn{display:inline-block; padding:14px 30px; font-size:.95rem; border-radius:var(--radius); transition:transform .15s ease;}
+  .btn-primary{background:var(--rose-deep); color:var(--paper);}
+  .btn-primary:hover{background:var(--ink);}
+  .btn-outline{border:1px solid var(--ink); color:var(--ink);}
+  .btn-outline:hover{background:var(--ink); color:var(--paper);}
+  .bloom-mark{position:absolute; right:-60px; top:40px; width:420px; opacity:.9; z-index:1;}
+  @media (max-width:900px){ .bloom-mark{display:none;} }
+
+  /* Mission */
+  .mission{border-top:1px solid var(--line);}
+  .mission .wrap{max-width:760px;}
+  .mission h2{font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:24px;}
+  .mission p{color:var(--ink-soft); font-size:1.08rem; margin-bottom:16px; max-width:60ch;}
+
+  /* Pillars */
+  .pillars{border-top:1px solid var(--line); background:var(--sage-pale);}
+  .section-head{margin-bottom:52px;}
+  .section-label{color:var(--sage); font-size:.9rem; margin-bottom:10px;}
+  .section-head h2{font-size:clamp(1.9rem,3.2vw,2.6rem);}
+  .pillar-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:0;}
+  .pillar{padding:0 28px 0 0; border-left:1px solid var(--line); padding-left:28px;}
+  .pillar:first-child{border-left:none; padding-left:0;}
+  .pillar h3{font-size:1.15rem; margin-bottom:10px;}
+  .pillar p{color:var(--ink-soft); font-size:.96rem;}
+  @media (max-width:820px){
+    .pillar-grid{grid-template-columns:1fr 1fr; row-gap:36px;}
+    .pillar:nth-child(3){border-left:none;}
+  }
+  @media (max-width:520px){
+    .pillar-grid{grid-template-columns:1fr; row-gap:32px;}
+    .pillar{border-left:none; padding-left:0;}
+  }
+
+  /* Featured book */
+  .featured{border-top:1px solid var(--line);}
+  .feat-grid{display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center;}
+  .feat-cover{display:block; aspect-ratio:3/4; border-radius:var(--radius); overflow:hidden; box-shadow:0 24px 50px -20px rgba(34,40,31,.35); transition:transform .2s ease;}
+  .feat-cover:hover{transform:translateY(-4px);}
+  .feat-cover img{width:100%; height:100%; object-fit:cover;}
+  .feat-text .eyebrow{margin-bottom:16px;}
+  .feat-text h2{font-size:clamp(1.9rem,3.4vw,2.7rem); line-height:1.12; margin-bottom:16px;}
+  .feat-text .sub{color:var(--rose-deep); font-size:1.02rem; margin-bottom:20px;}
+  .feat-text p.desc{color:var(--ink-soft); margin-bottom:30px; max-width:52ch;}
+  @media (max-width:820px){ .feat-grid{grid-template-columns:1fr; gap:36px;} .feat-cover{max-width:320px;} }
+
+  /* Collection */
+  .collection{border-top:1px solid var(--line); background:var(--sage-pale);}
+  .coll-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
+  .coll-card{background:var(--paper); border:1px solid var(--line); padding:34px 28px; border-radius:var(--radius);}
+  .coll-tag{font-size:.82rem; color:var(--gold); margin-bottom:16px;}
+  .coll-card h3{font-size:1.3rem; margin-bottom:10px;}
+  .coll-card p{color:var(--ink-soft); font-size:.95rem;}
+  @media (max-width:820px){ .coll-grid{grid-template-columns:1fr;} }
+
+  /* Resources */
+  .resources{border-top:1px solid var(--line);}
+  .res-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
+  .res-card{padding-top:26px; border-top:2px solid var(--ink);}
+  .res-card h3{font-size:1.2rem; margin-bottom:10px;}
+  .res-card p{color:var(--ink-soft); font-size:.95rem; margin-bottom:20px; min-height:66px;}
+  .res-link{font-size:.92rem; color:var(--rose-deep); border-bottom:1px solid var(--rose-deep); padding-bottom:2px;}
+  .res-link:hover{color:var(--ink); border-color:var(--ink);}
+  @media (max-width:820px){ .res-grid{grid-template-columns:1fr; gap:44px;} }
+
+  /* About */
+  .about{border-top:1px solid var(--line);}
+  .about-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:center;}
+  .about-mark{width:100%; aspect-ratio:4/5; border-radius:var(--radius); overflow:hidden; background:var(--sage-pale);}
+  .about-mark img{width:100%; height:100%; object-fit:cover; object-position:center 20%;}
+  .about h2{font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:20px;}
+  .about p{color:var(--ink-soft); margin-bottom:16px; max-width:56ch;}
+  .about .sign{font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; margin-top:10px; color:var(--ink);}
+  @media (max-width:760px){ .about-grid{grid-template-columns:1fr;} .about-mark{max-width:340px; margin:0 auto;} }
+
+  /* Journal */
+  .journal{border-top:1px solid var(--line); background:var(--sage-pale);}
+  .journal-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:36px;}
+  .jcard .cat{color:var(--sage); font-size:.85rem; margin-bottom:14px;}
+  .jcard h3{font-size:1.2rem; margin-bottom:10px; line-height:1.3;}
+  .jcard p{color:var(--ink-soft); font-size:.94rem; margin-bottom:16px;}
+  .jcard a{font-size:.9rem; color:var(--rose-deep); border-bottom:1px solid var(--rose-deep); padding-bottom:2px;}
+  @media (max-width:820px){ .journal-grid{grid-template-columns:1fr; gap:40px;} }
+
+  /* Contact */
+  .contact{border-top:1px solid var(--line); text-align:center;}
+  .contact .wrap{max-width:600px;}
+  .contact h2{font-size:clamp(1.9rem,3.2vw,2.6rem); margin-bottom:18px;}
+  .contact p{color:var(--ink-soft); margin-bottom:32px;}
+  .contact .cta-row{justify-content:center;}
+  .contact .email{display:block; margin-top:26px; color:var(--ink-soft); font-size:.95rem;}
+
+  /* Footer */
+  footer{border-top:1px solid var(--line); padding:60px 0 40px;}
+  .foot-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:40px; margin-bottom:40px;}
+  .foot-brand .logo{margin-bottom:12px;}
+  .foot-brand p{color:var(--ink-soft); max-width:32ch; font-size:.92rem;}
+  .foot-col h4{font-size:.85rem; color:var(--sage); margin-bottom:14px;}
+  .foot-col a{display:block; color:var(--ink-soft); font-size:.92rem; margin-bottom:10px;}
+  .foot-col a:hover{color:var(--rose-deep);}
+  .foot-bottom{border-top:1px solid var(--line); padding-top:24px; font-size:.85rem; color:var(--ink-soft);}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="#" class="logo">Intentional Bloom</a>
+    <button class="navToggle" id="navToggle" aria-label="Menu">☰</button>
+    <div class="navlinks" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#books">Books</a>
+      <a href="#resources">Free Resources</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="wrap">
+      <p class="eyebrow">Intentional Bloom</p>
+      <h1>Grow into the woman you're becoming.</h1>
+      <p>Gentle books, printable tools, and honest reflections for women choosing self-awareness, confidence, and a slower, more intentional life.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#books">Explore the books</a>
+        <a class="btn btn-outline" href="#resources">Free resources</a>
+      </div>
+    </div>
+    <svg class="bloom-mark" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#9C5B62" stroke-width="1.3" opacity="0.55">
+        <path d="M150 260 C150 190 150 140 150 60"/>
+        <path d="M150 150 C110 130 90 100 95 60"/>
+        <path d="M150 150 C190 130 210 100 205 60"/>
+        <path d="M150 190 C110 190 80 170 70 140"/>
+        <path d="M150 190 C190 190 220 170 230 140"/>
+        <circle cx="150" cy="55" r="14"/>
+        <circle cx="130" cy="45" r="10"/>
+        <circle cx="170" cy="45" r="10"/>
+      </g>
+    </svg>
+  </section>
+
+  <section class="mission">
+    <div class="wrap">
+      <h2>Our mission</h2>
+      <p>Intentional Bloom exists to help women slow down, get honest with themselves, and grow with purpose. We believe confidence isn't a personality trait — it's a practice, and that softness and strength were never opposites.</p>
+      <p>Every tool we create is built for the woman quietly becoming who she was always meant to be.</p>
+    </div>
+  </section>
+
+  <section class="pillars">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-label">What we believe in</p>
+        <h2>Four pillars of growth</h2>
+      </div>
+      <div class="pillar-grid">
+        <div class="pillar">
+          <h3>Self-awareness</h3>
+          <p>Understanding your patterns, your triggers, and the stories you tell yourself.</p>
+        </div>
+        <div class="pillar">
+          <h3>Confidence</h3>
+          <p>Trusting your own voice and your own judgment, without needing to be louder.</p>
+        </div>
+        <div class="pillar">
+          <h3>Intentional living</h3>
+          <p>Choosing your days on purpose instead of drifting through them on autopilot.</p>
+        </div>
+        <div class="pillar">
+          <h3>Personal growth tools</h3>
+          <p>Journals, workbooks, and gentle practices that turn insight into real change.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured" id="featured-book">
+    <div class="wrap feat-grid">
+      <a class="feat-cover" href="stop-rehearsing-start-speaking.html" aria-label="View Stop Rehearsing, Start Speaking">
+        <img src="IntentionalBloom-Images/Full-Speak.jpg" alt="Stop Rehearsing, Start Speaking book cover">
+      </a>
+      <div class="feat-text">
+        <p class="eyebrow">Now available</p>
+        <h2 id="books">Stop rehearsing, start speaking</h2>
+        <p class="sub">The Soft Reset Method for women who freeze instead of speaking up</p>
+        <p class="desc">You already know what you want to say. This book teaches a simple three-step method that helps you speak calmly in the moment, instead of rehearsing conversations after they've already happened.</p>
+        <a class="btn btn-primary" href="stop-rehearsing-start-speaking.html">Read the story</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="collection">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-label">The collection</p>
+        <h2>More books are blooming</h2>
+      </div>
+      <div class="coll-grid">
+        <div class="coll-card">
+          <p class="coll-tag">Coming soon</p>
+          <h3>Soft Boundaries</h3>
+          <p>Protecting your peace without losing your softness.</p>
+        </div>
+        <div class="coll-card">
+          <p class="coll-tag">Coming soon</p>
+          <h3>The Woman You're Becoming</h3>
+          <p>Healing, identity, and quiet confidence.</p>
+        </div>
+        <div class="coll-card">
+          <p class="coll-tag">Coming soon</p>
+          <h3>Bloom Slowly</h3>
+          <p>Daily reflections for emotional wellness and intentional living.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resources" id="resources">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-label">A small gift</p>
+        <h2>Free resources to begin with</h2>
+      </div>
+      <div class="res-grid">
+        <div class="res-card">
+          <h3>Journaling Prompts</h3>
+          <p>20 gentle prompts to help you get honest with yourself, one page at a time.</p>
+          <a class="res-link" href="https://melovy.online/wp-content/uploads/2026/09/10-Journal-Prompts-for-Becoming-More-Self-Aware.pdf">Download free</a>
+        </div>
+        <div class="res-card">
+          <h3>Printable Workbook</h3>
+          <p>A short guided workbook to help you identify what's really holding you back.</p>
+          <a class="res-link" href="https://melovy.online/wp-content/uploads/2026/09/Whats-Really-Holding-You-Back.pdf">Download free</a>
+        </div>
+        <div class="res-card">
+          <h3>Intentional Living Planner</h3>
+          <p>A simple weekly planner built around purpose, not just productivity.</p>
+          <a class="res-link" href="https://melovy.online/wp-content/uploads/2026/09/Intentional-Living-Weekly-Planner.pdf">Download free</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="wrap about-grid">
+      <div class="about-mark"><img src="IntentionalBloom-Images/Melody Image.png" alt="Melody, founder of Intentional Bloom, journaling at her desk"></div>
+      <div>
+        <p class="section-label">The woman behind Intentional Bloom</p>
+        <h2>Hi, I'm Melody</h2>
+        <p>I started Intentional Bloom because I spent years knowing exactly what I wanted to say and rarely saying it. I wanted to build the kind of gentle, practical tools I wished someone had handed me sooner.</p>
+        <p>Every book and resource here comes from real seasons of learning, not theory. My hope is that they meet you exactly where you are, and help you grow from there.</p>
+        <p class="sign">— Melody</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="journal">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="section-label">From the journal</p>
+        <h2>Recent reflections</h2>
+      </div>
+      <div class="journal-grid">
+        <div class="jcard">
+          <p class="cat">Self-awareness</p>
+          <h3>The quiet work of knowing yourself</h3>
+          <p>Why self-awareness rarely arrives loudly, and what to notice instead.</p>
+          <a href="#">Read more</a>
+        </div>
+        <div class="jcard">
+          <p class="cat">Intentional living</p>
+          <h3>Building a slower, softer week</h3>
+          <p>Small shifts that make a week feel chosen instead of survived.</p>
+          <a href="#">Read more</a>
+        </div>
+        <div class="jcard">
+          <p class="cat">Confidence</p>
+          <h3>Confidence is built, not born</h3>
+          <p>What actually changes when you practice trusting your own voice.</p>
+          <a href="#">Read more</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <h2>Have a question?</h2>
+      <p>If there's something you'd like to ask, share, or just say hello about, send us an email — we read every one.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:theintentionalbloom26@gmail.com">Email us</a>
+        <a class="btn btn-outline" href="https://mail.google.com/mail/?view=cm&fs=1&to=theintentionalbloom26@gmail.com">Open in Gmail</a>
+      </div>
+      <a class="email" href="mailto:theintentionalbloom26@gmail.com">theintentionalbloom26@gmail.com</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <p class="logo serif">Intentional Bloom</p>
+        <p>Gentle tools for women becoming who they were always meant to be.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#home">Home</a>
+        <a href="#featured-book">Books</a>
+        <a href="stop-rehearsing-start-speaking.html">The Soft Reset</a>
+        <a href="#resources">Free Resources</a>
+        <a href="#about">About</a>
+      </div>
+      <div class="foot-col">
+        <h4>Follow</h4>
+        <a href="https://www.pinterest.com/intentionalbloom/">Pinterest</a>
+        <a href="https://www.instagram.com/theintentionalbloom26/">Instagram</a>
+        <a href="https://www.threads.com/@theintentionalbloom26">Threads</a>
+        <a href="#">TikTok</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Intentional Bloom. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stop Rehearsing, Start Speaking — Intentional Bloom</title>
+<meta name="description" content="The Soft Reset Method for women who freeze instead of speaking up.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F8F3EC; --ink:#22281F; --ink-soft:#4B5245;
+    --rose:#C17E85; --rose-deep:#9C5B62; --sage:#6C7C5F; --sage-pale:#E4E7DA;
+    --line:#DCD3C4; --gold:#B08D57; --bad:#B3564F; --good:#5C7A57; --radius:2px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:'Work Sans',sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased;}
+  h1,h2,h3,.serif{font-family:'Fraunces',serif; font-weight:500; color:var(--ink);}
+  a{color:inherit;} img{max-width:100%; display:block;}
+  .wrap{max-width:900px; margin:0 auto; padding:0 28px;}
+  section{padding:76px 0; border-top:1px solid var(--line);}
+  section:first-of-type{border-top:none;}
+  @media (max-width:700px){ section{padding:52px 0;} .wrap{padding:0 20px;} }
+  .eyebrow{color:var(--sage); font-size:.92rem; margin-bottom:14px;}
+  h2{font-size:clamp(1.7rem,3.2vw,2.3rem); line-height:1.2; margin-bottom:20px; max-width:20ch;}
+  p{color:var(--ink-soft); margin-bottom:14px; max-width:62ch;}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+  .btn{display:inline-block; padding:16px 32px; font-size:1rem; border-radius:var(--radius); background:var(--rose-deep); color:var(--paper); text-align:center;}
+  .btn:hover{background:var(--ink);}
+  .cta-block{text-align:center; margin:36px 0 10px;}
+  .cta-note{font-size:.85rem; color:var(--ink-soft); margin-top:12px;}
+  .backlink{font-size:.9rem; color:var(--ink-soft); display:inline-block; margin:28px 0 0 28px;}
+
+  /* Hero */
+  .hero .wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; padding-top:20px;}
+  .hero-cover{border-radius:var(--radius); overflow:hidden; box-shadow:0 30px 60px -24px rgba(34,40,31,.4);}
+  .hero h1{font-size:clamp(1.9rem,3.6vw,2.7rem); line-height:1.18; margin-bottom:18px;}
+  @media (max-width:800px){ .hero .wrap{grid-template-columns:1fr;} .hero-cover{max-width:320px; margin:0 auto;} }
+
+  /* Card grids */
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .grid4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  @media (max-width:700px){ .grid2{grid-template-columns:1fr;} .grid4{grid-template-columns:1fr 1fr;} }
+  .card{background:var(--sage-pale); padding:24px 22px; border-radius:var(--radius);}
+  .card h3{font-size:1.02rem; margin-bottom:8px;}
+  .card p{font-size:.92rem; margin-bottom:0;}
+  .tag{font-size:.78rem; color:var(--bad); margin-bottom:8px; display:block;}
+
+  /* Cycle */
+  .cycle-row{display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
+  .cycle-step{flex:1; min-width:140px; text-align:center; padding:20px 14px; border:1px solid var(--line);}
+  .cycle-step .num{font-family:'Fraunces',serif; font-style:italic; color:var(--rose-deep); font-size:1.1rem; margin-bottom:6px;}
+
+  /* Stats */
+  .stat-row{display:flex; gap:40px; flex-wrap:wrap; justify-content:center; text-align:center;}
+  .stat{max-width:260px;}
+  .stat .num{font-family:'Fraunces',serif; font-size:2.6rem; color:var(--rose-deep);}
+  .stat p{font-size:.92rem;}
+
+  /* Myth/Reality */
+  .mr-row{display:flex; gap:18px; padding:16px 0; border-bottom:1px solid var(--line); align-items:flex-start;}
+  .mr-row:last-child{border-bottom:none;}
+  .mr-row .myth{flex:1; color:var(--bad); font-size:.95rem;}
+  .mr-row .reality{flex:1; color:var(--good); font-size:.95rem; font-weight:500;}
+  .mr-labels{display:flex; gap:18px; margin-bottom:6px; font-size:.8rem; color:var(--ink-soft);}
+  .mr-labels span{flex:1;}
+
+  /* Method steps */
+  .method-step{display:flex; gap:22px; margin-bottom:36px; align-items:flex-start;}
+  .method-step .badge{font-family:'Fraunces',serif; font-style:italic; font-size:1.5rem; color:var(--rose-deep); min-width:44px;}
+  .method-step h3{font-size:1.2rem; margin-bottom:8px;}
+
+  /* Inside list */
+  .inside-row{display:flex; justify-content:space-between; gap:20px; padding:18px 0; border-bottom:1px solid var(--line);}
+  .inside-row:first-child{border-top:1px solid var(--line);}
+  .inside-row h3{font-size:1.05rem; margin-bottom:6px;}
+  .inside-row p{font-size:.92rem; margin-bottom:0;}
+  .inside-row .pg{font-size:.85rem; color:var(--gold); white-space:nowrap; padding-top:4px;}
+
+  /* Testimonials */
+  .testi{background:var(--sage-pale); padding:26px 24px; border-radius:var(--radius);}
+  .testi .stars{color:var(--gold); margin-bottom:10px; font-size:.9rem;}
+  .testi p{font-style:italic; font-size:.95rem; color:var(--ink);}
+  .testi .who{font-size:.85rem; color:var(--ink-soft); margin-top:10px;}
+
+  /* Compare table */
+  table{width:100%; border-collapse:collapse; margin-top:10px;}
+  th,td{text-align:left; padding:12px 10px; border-bottom:1px solid var(--line); font-size:.9rem;}
+  th{color:var(--ink-soft); font-weight:500; font-size:.85rem;}
+  td.yes{color:var(--good);} td.no{color:var(--bad);}
+  @media (max-width:700px){ table{font-size:.82rem;} th,td{padding:10px 6px;} }
+
+  /* Bonuses */
+  .bonus{display:grid; grid-template-columns:140px 1fr; gap:22px; align-items:center; padding:20px 0; border-bottom:1px solid var(--line);}
+  .bonus img{border-radius:var(--radius); box-shadow:0 14px 30px -14px rgba(34,40,31,.35);}
+  .bonus .val{font-size:.82rem; color:var(--gold); margin-bottom:6px;}
+  @media (max-width:560px){ .bonus{grid-template-columns:1fr;} .bonus img{max-width:140px;} }
+
+  /* Without/with */
+  ul.plain{list-style:none;}
+  ul.plain li{padding:8px 0 8px 26px; position:relative; font-size:.95rem; color:var(--ink-soft);}
+  .without li::before{content:"–"; position:absolute; left:0; color:var(--bad);}
+  .with li::before{content:"+"; position:absolute; left:0; color:var(--good);}
+
+  /* FAQ */
+  details{border-bottom:1px solid var(--line); padding:16px 0;}
+  summary{cursor:pointer; font-family:'Fraunces',serif; font-size:1.05rem; color:var(--ink);}
+  details p{margin-top:12px; font-size:.94rem;}
+
+  footer{padding:50px 0; text-align:center;}
+  footer p{font-size:.82rem; color:var(--ink-soft); max-width:60ch; margin:6px auto;}
+</style>
+</head>
+<body>
+
+<a class="backlink" href="index.html">← Back to Intentional Bloom</a>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">For women who freeze instead of speaking up</p>
+      <h1>You already know what you want to say. You just can't get it out before the moment passes.</h1>
+      <p>Stop Rehearsing, Start Speaking uses The Soft Reset Method to help you say what you mean, calmly and without falling apart, so the words finally match the moment.</p>
+      <a class="btn" href="#buy">Yes, I want Stop Rehearsing, Start Speaking — ₦5,800</a>
+      <p class="cta-note">Secure payment. Instant digital delivery.</p>
+    </div>
+    <div class="hero-cover"><img src="IntentionalBloom-Images/Full-Speak.jpg" alt="Stop Rehearsing, Start Speaking book cover"></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">My story</p>
+    <h2>The meeting I rehearsed for three days and said nothing in</h2>
+    <p>I had the whole thing scripted in my head. What I would say, how I would say it, even the pause I would take before the important part. I ran it in the shower, in traffic, lying awake at 1am. By the time the meeting actually started, I had said those words a hundred times, in my head, to no one.</p>
+    <p>Then it was my turn to speak. And nothing came out the way I had practiced. I said something small and safe instead, sat back down, and spent the rest of the day replaying it, furious at myself for freezing again.</p>
+    <p>It was not the first time. It was not the tenth time either. It happened with my family, with a friend who kept crossing a line, with a landlord I was too scared to correct. I would feel the words rising, and then something in my chest would clamp shut, and either I said nothing, or I cried before I finished the sentence.</p>
+    <p>I told myself I was just sensitive. That some people are naturally more assertive and I was not built that way. I watched motivational videos, saved quotes about confidence, felt inspired for a day, and slipped right back into the same pattern the next time it mattered.</p>
+    <p><strong>Then I found something that changed everything.</strong></p>
+    <div class="grid4" style="margin-top:28px;">
+      <div class="card"><h3>Motivational quotes</h3><p>Feels good for a day, then fades once real life resumes.</p></div>
+      <div class="card"><h3>Rehearsing in your head</h3><p>Words sound perfect alone, then vanish the moment it counts.</p></div>
+      <div class="card"><h3>Comparing yourself online</h3><p>Leaves you feeling behind, never actually further along.</p></div>
+      <div class="card"><h3>Waiting to feel ready</h3><p>The moment always arrives before the readiness does.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>You have already tried the things that do not work</h2>
+    <p>None of this means something is wrong with you. It means you have been reaching for tools that were never built to hold the moment when it actually arrives.</p>
+    <div class="grid2" style="margin-top:24px;">
+      <div class="card"><span class="tag">Failed attempt</span><h3>Rehearsing the perfect script</h3><p>It works in your head, in the shower, in the car. Then the real moment has different timing, a different tone, a different face looking back at you, and the script falls apart.</p></div>
+      <div class="card"><span class="tag">Failed attempt</span><h3>Bottling it until you explode or cry</h3><p>Swallowing the feeling does not make it disappear. It just waits, builds pressure, and comes out sideways, usually as tears, right when you most wanted to sound calm.</p></div>
+      <div class="card"><span class="tag">Failed attempt</span><h3>One inspiring video, then back to old habits</h3><p>Inspiration gives you a feeling, not a skill. Without practice built into your day, the old pattern quietly takes back over within 24 hours.</p></div>
+      <div class="card"><span class="tag">Failed attempt</span><h3>Measuring yourself against other women online</h3><p>Comparison tells you where you rank. It never tells you what to actually say or do next, so you end up more discouraged and no further ahead.</p></div>
+    </div>
+    <div class="cta-block"><a class="btn" href="#buy">Yes, I want Stop Rehearsing, Start Speaking — ₦5,800</a><p class="cta-note">Secure payment. Instant digital delivery.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center">Stuck in the same cycle</h2>
+    <div class="cycle-row">
+      <div class="cycle-step"><div class="num">1</div>Feel the trigger rise</div>
+      <div class="cycle-step"><div class="num">2</div>Rehearse it silently</div>
+      <div class="cycle-step"><div class="num">3</div>Freeze or cry instead</div>
+      <div class="cycle-step"><div class="num">4</div>Replay and regret it</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="center" style="max-width:none;">This is not just you</h2>
+    <p class="center">The freeze-and-replay pattern is one of the most common, and most rarely spoken about, struggles among women who are otherwise capable and articulate.</p>
+    <div class="stat-row" style="margin-top:24px;">
+      <div class="stat"><div class="num">7 in 10</div><p><strong>Say they've stayed silent.</strong> Report choosing silence over speaking up, even when they clearly disagreed.</p></div>
+      <div class="stat"><div class="num">3×</div><p><strong>More likely to overthink.</strong> Women who describe themselves as "people pleasers" report rehearsing conversations far more often before they happen.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Everything you were told about speaking up is wrong</h2>
+    <div class="mr-labels"><span>Myth</span><span>Reality</span></div>
+    <div class="mr-row"><div class="myth">Confident women are just born that way.</div><div class="reality">Confidence is built through repeated, small, practiced moments, not personality.</div></div>
+    <div class="mr-row"><div class="myth">Crying before you finish means you failed.</div><div class="reality">It means the emotion needed a release valve before the words could come out clean.</div></div>
+    <div class="mr-row"><div class="myth">You need to become a louder, bolder person.</div><div class="reality">You need the right words at the right moment, said in your own natural voice.</div></div>
+    <div class="mr-row"><div class="myth">If nothing has worked yet, something is wrong with you.</div><div class="reality">Nothing has worked yet because nothing gave you a repeatable process to follow.</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Introducing</p>
+    <h2>The Soft Reset Method</h2>
+    <p>Most confidence advice tells you to "just speak up." The Soft Reset Method works differently — it gives you a three-part process to move through the moment the trigger hits, instead of trying to will yourself into a different personality.</p>
+    <div style="margin-top:32px;">
+      <div class="method-step"><div class="badge">1</div><div><h3>Notice</h3><p>You learn to recognize the exact moment an emotional trigger or comparison spiral is starting, catching it early instead of realizing only after you've already frozen or lashed out.</p></div></div>
+      <div class="method-step"><div class="badge">2</div><div><h3>Release</h3><p>Instead of swallowing the feeling or letting it explode, you process it through guided journaling designed to move the emotion through you quickly, so it doesn't hijack the conversation.</p></div></div>
+      <div class="method-step"><div class="badge">3</div><div><h3>Speak</h3><p>With the emotional charge already released, you practice saying the actual words, calmly, using the workbook's scripts and exercises built for real situations, not hypothetical ones.</p></div></div>
+    </div>
+    <p>I was getting too many messages asking how I did it, so I decided to put everything inside one complete guide.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Here is exactly what is waiting for you inside</h2>
+    <div class="inside-row"><div><h3>Why You Rehearse Instead Of Speak</h3><p>The real reason your words disappear the moment it counts, and how to interrupt that pattern for good.</p></div><div class="pg">Page 6</div></div>
+    <div class="inside-row"><div><h3>Breaking The Comparison Cycle</h3><p>Step out of the scroll-and-shrink loop that convinces you everyone else has this figured out but you.</p></div><div class="pg">Page 14</div></div>
+    <div class="inside-row"><div><h3>The Self-Sabotage Pattern</h3><p>Spot the exact habits quietly working against the change you say you want.</p></div><div class="pg">Page 21</div></div>
+    <div class="inside-row"><div><h3>Building Your Confidence Practice</h3><p>A repeatable daily structure that turns speaking up from a scary event into a normal habit.</p></div><div class="pg">Page 29</div></div>
+    <div class="inside-row"><div><h3>Your Speaking-Up Tracker</h3><p>A simple tool to log every moment you spoke instead of stayed silent, so progress becomes visible.</p></div><div class="pg">Page 38</div></div>
+    <p style="margin-top:22px;">You do not need years of therapy before you see a shift. You do not need a personality change or to become someone louder than you are. You do not need expensive courses or coaching to get started. The same method that worked for me has now quietly started working for other women too.</p>
+    <div class="grid4">
+      <div class="card"><h3>Phase 1</h3><p>Notice patterns</p></div>
+      <div class="card"><h3>Phase 2</h3><p>Release daily</p></div>
+      <div class="card"><h3>Phase 3</h3><p>Practice scripts</p></div>
+      <div class="card"><h3>Phase 4</h3><p>Speak up live</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What women are saying</h2>
+    <div class="grid2">
+      <div class="testi"><div class="stars">★★★★★</div><p>"I used the Notice-Release-Speak steps before a salary conversation I had been avoiding for months. I said what I wanted, calmly, without crying halfway through. That alone was worth it."</p><div class="who">Chidinma A. — Lagos, Nigeria</div></div>
+      <div class="testi"><div class="stars">★★★★★</div><p>"The comparison tracker section hit hardest. I realised how many hours I'd lost scrolling and measuring myself against other women instead of practicing. Three weeks in and I've spoken up in two work meetings I would normally have stayed silent in."</p><div class="who">Tomiwa O. — London, UK</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>How this compares</h2>
+    <table>
+      <tr><th></th><th>Stop Rehearsing, Start Speaking</th><th>Traditional Therapy</th><th>Generic Confidence Course</th></tr>
+      <tr><td>Price</td><td class="yes">₦5,800 one-time</td><td>Recurring, ongoing sessions</td><td>Often ₦30,000+</td></tr>
+      <tr><td>Speed of results</td><td class="yes">Start today</td><td class="no">Weeks to months</td><td class="no">Long modules</td></tr>
+      <tr><td>Ease of use</td><td class="yes">Simple workbook format</td><td class="no">Requires scheduling</td><td class="no">Hours of video</td></tr>
+      <tr><td>Ongoing cost</td><td class="yes">None</td><td class="no">Per session</td><td class="no">Often has upsells</td></tr>
+      <tr><td>Community support</td><td class="yes">Included</td><td class="no">Individual only</td><td class="yes">Sometimes</td></tr>
+      <tr><td>Guarantee</td><td class="yes">30-day, no questions</td><td class="no">Rare</td><td class="no">Varies</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="buy">
+  <div class="wrap">
+    <h2>Wait — I am not done yet. If you are among the first 30 buyers only, lock in ₦5,800 before it goes up. You also get these free gifts:</h2>
+    <div class="bonus"><img src="IntentionalBloom-Images/ComparisonExit.jpg" alt="The Comparison Exit book cover"><div><div class="val">Valued at ₦4,500</div><h3>The Comparison Exit</h3><p>A guided companion workbook to break the comparison-to-shutdown loop, so scrolling and comparing no longer steals your focus or your confidence.</p></div></div>
+    <div class="bonus"><img src="IntentionalBloom-Images/30 Days.png" alt="The 30-Day Speak Up Challenge book cover"><div><div class="val">Valued at ₦5,000</div><h3>The 30-Day Speak Up Challenge</h3><p>A daily action tracker that builds the habit of speaking up one small moment at a time, so confidence becomes a practice, not a one-time decision.</p></div></div>
+    <p style="margin-top:20px;">The value of everything together is ₦29,000. You are getting all of it for just ₦5,800.</p>
+    <div class="cta-block"><a class="btn" href="https://selar.com/7m077e090j" target="_blank" rel="noopener">Get Speak Up + all bonuses right now — ₦5,800</a><p class="cta-note">Secure payment. Instant digital delivery. Bonuses included today.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>30-day money-back guarantee</h2>
+    <p>Still on the fence? I completely understand. Which is why I am taking all the risk away from you.</p>
+    <p>When you get Stop Rehearsing, Start Speaking today, you have a full 30 days to go through everything, try the method, and see the results for yourself. That is 30 days of access to every page, every step, and every bonus, with zero financial risk on your side.</p>
+    <p>If at any point within those 30 days you decide this is not for you, for any reason, or for no reason at all, simply send one email and you will receive a full refund. No questions. No forms to fill. No waiting. No awkward conversations. Just your money back, promptly and without fuss.</p>
+    <p>I am able to make this promise because I have seen what happens when the right person gets this information. It works. And I would rather you try it with complete confidence than hesitate and stay stuck.</p>
+    <p><strong>The only way you lose is if you do nothing.</strong></p>
+    <div class="cta-block"><a class="btn" href="#buy">Yes, I want Stop Rehearsing, Start Speaking — ₦5,800</a><p class="cta-note">Secure payment. Instant digital delivery. 30-day guarantee included.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="grid2">
+      <div>
+        <h2 style="font-size:1.3rem;">Without Stop Rehearsing, Start Speaking</h2>
+        <ul class="plain without">
+          <li>Another year of rehearsing conversations you never actually have</li>
+          <li>Crying through moments you wanted to handle calmly</li>
+          <li>Hours lost comparing yourself to women who seem further ahead</li>
+          <li>The same boundary crossed again because you couldn't say it out loud</li>
+          <li>Still waiting to feel "ready enough" to speak up</li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="font-size:1.3rem;">With Stop Rehearsing, Start Speaking</h2>
+        <ul class="plain with">
+          <li>A clear process for the exact moment a trigger hits</li>
+          <li>Saying what you mean, calmly, without falling apart</li>
+          <li>Comparison spirals interrupted before they steal your whole day</li>
+          <li>Boundaries stated plainly, the first time you say them</li>
+          <li>A daily practice that makes speaking up feel normal, not terrifying</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Your questions, answered</h2>
+    <details><summary>How is the product delivered?</summary><p>As an instant digital download you can access as soon as your payment is confirmed.</p></details>
+    <details><summary>What device do I need to use it?</summary><p>Any phone, tablet, or computer that can open a PDF. No special app required.</p></details>
+    <details><summary>Do I need any prior experience?</summary><p>No. The workbook is built for complete beginners and walks you through each step.</p></details>
+    <details><summary>What is the refund policy?</summary><p>A full 30-day, no-questions-asked money-back guarantee. One email is all it takes.</p></details>
+    <details><summary>How quickly will I see results?</summary><p>Most women notice a shift in how they handle triggers within their first week of daily practice.</p></details>
+    <details><summary>What makes this different from everything else I have tried?</summary><p>It gives you a repeatable three-step process, not just motivation or theory.</p></details>
+    <details><summary>Will this work for a complete beginner?</summary><p>Yes. The scripts and exercises are built for real situations, starting from wherever you are now.</p></details>
+  </div>
+</section>
+
+<section>
+  <div class="wrap center">
+    <h2 class="center">Say the words this time</h2>
+    <p class="center">Every week you wait is another week of rehearsing in your head instead of speaking in the room. The freeze, the tears, the replaying, none of it fades on its own. It fades when you have a process to interrupt it.</p>
+    <p class="center">Getting started takes less time than the last conversation you rehearsed and never had. Instant access, no waiting, no complicated setup, just open the guide and begin.</p>
+    <div class="cta-block"><a class="btn" href="https://selar.com/7m077e090j" target="_blank" rel="noopener">Yes, I am ready — get Stop Rehearsing, Start Speaking for ₦5,800</a><p class="cta-note">Secure checkout. Instant access. First 30 buyers only, lock in ₦5,800 before it goes up.<br>30-Day No-Questions-Asked Guarantee</p></div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Stop Rehearsing, Start Speaking. All rights reserved.</p>
+  <p>Results may vary. This guide is for educational purposes and is not a substitute for professional therapy or medical advice.</p>
+  <p>Your personal data is never sold or shared with third parties.</p>
+</footer>
+
+</body>
+</html>
