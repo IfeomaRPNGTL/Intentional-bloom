@@ -1,25 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Order Confirmed — Stop Rehearsing, Start Speaking</title>
-<style>
-  :root{
-    --primary:#3D1F35;
-    --primary-10: rgba(61,31,53,0.10);
-    --primary-06: rgba(61,31,53,0.06);
-    --secondary:#B5502F;
-    --accent:#B5502F;
-    --accent-30: rgba(181,80,47,0.30);
-    --accent-14: rgba(181,80,47,0.14);
-    --bg:#F5EFE0;
-    --white:#FFFFFF;
-    --text:#2B2B2B;
-    --text-soft: rgba(43,43,43,0.72);
-    --serif: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', serif;
-    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Order Confirmed — Stop Rehearsing, Start Speaking</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+      };
+      if(!f._fbq)f._fbq=n;
+      n.push=n;
+      n.loaded=!0;
+      n.version='2.0';
+      n.queue=[];
+      t=b.createElement(e);
+      t.async=!0;
+      t.src=v;
+      s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1330181995661831');
+    fbq('track', 'PageView');
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1330181995661831&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+
+  <style>
+    :root{
+      --primary:#3D1F35;
+      --primary-10: rgba(61,31,53,0.10);
+      --primary-06: rgba(61,31,53,0.06);
+      --secondary:#B5502F;
+      --accent:#B5502F;
+      --accent-30: rgba(181,80,47,0.30);
+      --accent-14: rgba(181,80,47,0.14);
+      --bg:#F5EFE0;
+      --white:#FFFFFF;
+      --text:#2B2B2B;
+      --text-soft: rgba(43,43,43,0.72);
+      --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
   body{
@@ -237,6 +269,17 @@
 </style>
 </head>
 <body>
+
+  <!-- Purchase Event -->
+  <script>
+    fbq('track', 'Purchase', {
+      value: 5800,
+      currency: 'NGN',
+      content_name: 'Stop Rehearsing, Start Speaking',
+      content_category: 'Digital Workbook',
+      content_type: 'product'
+    });
+  </script>
 
 <!-- ================= CONFIRMATION HEADER ================= -->
 <section class="confirm-hero">
